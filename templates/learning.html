@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+  <a class="back" href="/dashboard">← Back</a>
+  <h1 class="center">Financial & Investment Learning</h1>
+
+  <div class="center-block">
+    <h3>Add Learning Content</h3>
+    <form id="learningForm">
+      <label>Type</label>
+      <select id="learningType">
+        <option value="book">Books Summary</option>
+        <option value="podcast">Financial Podcast</option>
+      </select>
+      <label>Name</label><input id="learningName" required />
+      <label>Content (summary or YouTube link)</label><input id="learningContent" required />
+      <label>Image Link (optional)</label><input id="learningImage" />
+      <label>Code</label><input id="learningCode" placeholder="Enter code" required />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <h3>Available Learning</h3>
+  <div id="learningList" class="card-grid"></div>
+</div>
+{% endblock %}

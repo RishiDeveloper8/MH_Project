@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+  <div class="back-button" style="visibility:hidden;">Back</div>
+  <h1 class="center">Dashboard</h1>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Total Income</h3>
+      <div id="totalIncome">0</div>
+    </div>
+    <div class="card">
+      <h3>Total Expense</h3>
+      <div id="totalExpense">0</div>
+    </div>
+    <div class="card">
+      <h3>Net Bank Balance</h3>
+      <div id="netBalance">0</div>
+    </div>
+  </div>
+
+  <div class="center-block">
+    <h2>Add Your Income & Expense Transactions</h2>
+    <form id="txnForm">
+      <label>Type</label>
+      <select id="txnType" required>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <label>Amount</label>
+      <input type="number" id="txnAmount" step="0.01" required />
+      <label>Description</label>
+      <input id="txnDesc" />
+      <button type="submit">Add Transaction</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

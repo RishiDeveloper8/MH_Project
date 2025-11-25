@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+  <a class="back" href="/dashboard">← Back</a>
+  <h1 class="center">Transactions History</h1>
+
+  <div class="table-wrap">
+    <table class="txn-table">
+      <thead>
+        <tr><th>Transaction Type</th><th>Amount</th><th>Description</th><th>Date & Time</th></tr>
+      </thead>
+      <tbody id="txnTableBody"></tbody>
+    </table>
+    <div class="pager">
+      <button id="prevBtn">Prev</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+
+  <div class="chart-block">
+    <h3>Your Expense & Net Balance Chart</h3>
+    <canvas id="mainChart" width="800" height="300"></canvas>
+  </div>
+</div>
+{% endblock %}

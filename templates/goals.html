@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+  <a class="back" href="/dashboard">← Back</a>
+  <h1 class="center">Saving Goal Tracking</h1>
+
+  <div class="center-block">
+    <h3>Make Your Saving Goal</h3>
+    <form id="goalForm">
+      <label>Goal</label><input id="goalName" required />
+      <label>Targeted Months for Completion</label><input id="goalMonths" type="number" value="3" min="1" required />
+      <label>Amount</label><input id="goalAmount" type="number" step="0.01" required />
+      <button type="submit">Add Saving Goal</button>
+    </form>
+  </div>
+
+  <h3>Your Saving Goals</h3>
+  <div id="goalsGrid" class="card-grid"></div>
+</div>
+{% endblock %}

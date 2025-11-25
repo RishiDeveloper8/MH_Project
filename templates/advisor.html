@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+  <a class="back" href="/dashboard">← Back</a>
+  <h1 class="center">A.I Financial Advisor</h1>
+
+  <div class="center-block">
+    <button id="personalBtn">Personal Financial Advisor</button>
+    <button id="tradingBtn">Trading & Stock Marketing Advisor</button>
+  </div>
+
+  <div class="chat-block" id="chatBlock" style="display:none;">
+    <div id="chatWindow" class="chat-window"></div>
+    <form id="chatForm">
+      <input id="chatInput" placeholder="Ask your question..." required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
